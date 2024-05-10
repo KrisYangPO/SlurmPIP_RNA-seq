@@ -7,10 +7,6 @@
 # ==============================================================================
 : '
 * 迴圈取得 sampleID 有問題：考慮原始檔用 "R1" 做抓取，但是沒有考慮是 single-end。
-* 特殊檔案像是 index file, GTF 等要設計新的參數
-  (testing)-> 可以直接設計參數選擇用 mouse/human genome 進行不同物種的分析。
-  -> 或是可以將 gtf/index file 絕對路徑加入config_toolsPATH.sh 進行 source。
-
 * HT-seq 把 bam 全部輸出可能會在每個 sample 執行時覆蓋同個檔案。
 * HT-seq count 在執行(python)讀取 gtf file 時，會出現錯誤，可能是資料分隔的問題。'
 
