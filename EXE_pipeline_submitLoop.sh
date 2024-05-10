@@ -7,6 +7,13 @@
 # ==============================================================================
 : '
 * 迴圈取得 sampleID 有問題：考慮原始檔用 "R1" 做抓取，但是沒有考慮是 single-end。
+<<<<<<< HEAD
+=======
+* 特殊檔案像是 index file, GTF 等要設計新的參數
+  (testing)-> 可以直接設計參數選擇用 mouse/human genome 進行不同物種的分析。
+  -> 或是可以將 gtf/index file 絕對路徑加入config_toolsPATH.sh 進行 source。
+
+>>>>>>> RNApip/master
 * HT-seq 把 bam 全部輸出可能會在每個 sample 執行時覆蓋同個檔案。
 * HT-seq count 在執行(python)讀取 gtf file 時，會出現錯誤，可能是資料分隔的問題。'
 
@@ -18,8 +25,12 @@
 (解決)* 在EXE/config 加入 species 參數，並由 STAR 還有 HTseq-count scripts 裡判斷式判斷。
 (解決)* pipeline scripts 陣列輸入問題解決！
 (解決)* 執行 EXE_pipeline_submitLoop.sh與原始檔位置不同 -> 直接修改成絕對路徑。
+<<<<<<< HEAD
 (解決)* 定序檔案都會有不一樣的序號 -> config_pruneFastqname.sh 直接修改原始檔檔名。 (line 68)
 (解決)* 可以利用 specie 參數決定要用哪個物種的 gtf 或是 STAR index 進行分析。'
+=======
+(解決)* 定序檔案都會有不一樣的序號 -> config_pruneFastqname.sh 直接修改原始檔檔名。 (line 68)'
+>>>>>>> RNApip/master
 
 
 
