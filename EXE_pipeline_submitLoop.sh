@@ -27,11 +27,8 @@
 (解決)* 執行 EXE_pipeline_submitLoop.sh與原始檔位置不同 -> 直接修改成絕對路徑。
 <<<<<<< HEAD
 (解決)* 定序檔案都會有不一樣的序號 -> config_pruneFastqname.sh 直接修改原始檔檔名。 (line 68)
-(解決)* 可以利用 specie 參數決定要用哪個物種的 gtf 或是 STAR index 進行分析。'
-=======
+(解決)* 可以利用 specie 參數決定要用哪個物種的 gtf 或是 STAR index 進行分析
 (解決)* 定序檔案都會有不一樣的序號 -> config_pruneFastqname.sh 直接修改原始檔檔名。 (line 68)'
->>>>>>> RNApip/master
-
 
 
 # Annotation 使用說明：
