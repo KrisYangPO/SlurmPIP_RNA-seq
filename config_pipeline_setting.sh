@@ -244,6 +244,7 @@ D_JID=$(\
   -o ${Path_report}/Step4_${sampleID}.o.txt \
   -e ${Path_report}/Step4_${sampleID}.e.txt \
   ${Path_main}/scripts/${pipeline_scripts[3]} \
+  ${sampleID} \
   ${Path_main}/Step2_output \
   ${Path_main}/Step4_output \
   ${SB_core} \

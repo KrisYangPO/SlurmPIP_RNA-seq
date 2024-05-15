@@ -2,10 +2,11 @@
 # htseq human genome
 
 # parameters
-inputpath=$1
-outputpath=$2
-core=$3
-species=$4
+sampleID=$1
+inputpath=$2
+outputpath=$3
+core=$4
+species=$5
 
 
 # index:
@@ -21,7 +22,7 @@ fi
 
 # 抓取所有 bam 檔案，直接執行所有 htseq-count
 cd ${inputpath}
-samples=($(ls *.out.bam))
+sample=$(ls ${sampleID}_*.out.bam)
 
 
 # Run HTseq-count
@@ -31,10 +32,12 @@ htseq-count -m intersection-nonempty --nonunique all \
  -t exon \
  --idattr gene_name \
  -n ${core} \
- ${samples[@]} \
+ ${sample} \
  ${gtf} \
- > ${outputpath}/HTseq_count_Allbam.txt
+ > ${outputpath}/HTseq_${sampleID}.txt
 
+
+echo "Sample: "${sampleID}
 echo "Species: "${species}
 echo "GTF file: "$(basename ${gtf})
 
