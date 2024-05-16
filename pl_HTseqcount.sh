@@ -23,6 +23,7 @@ fi
 # 抓取所有 bam 檔案，直接執行所有 htseq-count
 cd ${inputpath}
 sample=$(ls ${sampleID}_*.out.bam)
+samples=($(ls *.out.bam))
 
 
 # Run HTseq-count
@@ -35,6 +36,17 @@ htseq-count -m intersection-nonempty --nonunique all \
  ${sample} \
  ${gtf} \
  > ${outputpath}/HTseq_${sampleID}.txt
+
+
+# Run HTseq-count and collect all samples into a table
+htseq-count -m intersection-nonempty --nonunique all \
+ -f bam -s reverse \
+ -t exon \
+ --idattr gene_name \
+ -n ${core} \
+ ${samples[@]} \
+ ${gtf} \
+ > ${outputpath}/HTseq_ALL.txt
 
 
 echo "Sample: "${sampleID}
