@@ -21,4 +21,5 @@
 /opt/ohpc/Taiwania3/pkg/biology/BBTools/BBTools_v37.62/bin/
 # HTseq
 /opt/ohpc/Taiwania3/pkg/biology/Htseq/Htseq_v0.13.5/bin/
-
+# xlsx2csv
+/staging/biology/ls807terra/0_Programs/xlsx2csv-master/
