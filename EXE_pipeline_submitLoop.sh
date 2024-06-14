@@ -77,12 +77,17 @@ sepcies=
 
 
 # 執行 PATH export
+# 執行 Genome PATH
 # ==============================================================================
 source \
  ${Path_main}/scripts/config_toolsPATH_exprSource.sh \
  ${Path_main}/scripts/config_toolsPATH.sh
 
 echo -e "\n--> Tools path are saved into PATH\n--> Initiate pipeline\n"
+
+source \
+ ${Path_main}/scripts/config_genomePATH.sh
+
 
 
 

@@ -10,13 +10,12 @@ species=$5
 
 
 # index:
-# 用判斷式判斷 speci 裡面有沒有 mouse/human 字串。
+# 用判斷式判斷 species 裡面有沒有 mouse/human 字串。
 if [[ $species == *'mouse'* ]]; then
-  gtf=/staging/biology/ls807terra/0_genomes/genome_gtf/mm10/mm10.refGene.gtf
+  gtf=${gtf_mm10}
 
 elif [[ $species == *'human'* ]]; then
-  gtf=/staging/biology/ls807terra/0_genomes/genome_gtf/CHM13/CHM13_v2.0.gtf
-
+  gtf=${gtf_chm13}
 fi
 
 
