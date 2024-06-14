@@ -11,10 +11,10 @@ species=$5
 # index:
 # 用判斷式判斷 speci 裡面有沒有 mouse/human 字串。
 if [[ $species == *'mouse'* ]]; then
-  index=/staging/biology/ls807terra/0_genomes/star_index/mm10_star_2.7.9
+  index=${staridx_mm10}
 
 elif [[ $species == *'human'* ]]; then
-  index=/staging/biology/ls807terra/0_genomes/star_index/CHM13_human
+  index=${staridx_chm13}
 
 fi
 
